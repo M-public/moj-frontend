@@ -1,7 +1,12 @@
 <template>
   <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"> 用户布局 </a-layout-header>
+      <a-layout-header class="header">
+        <a-space>
+          <img src="../assets/logo.png" class="logo" />
+          <div>M OJ</div>
+        </a-space>
+      </a-layout-header>
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
@@ -14,21 +19,26 @@
 
 <style scoped>
 #userLayout {
+  text-align: center;
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png")
+    0% 0% / 100% 100%;
+  padding: 32px 0px 24px;
 }
 
+#userLayout .logo {
+  height: 64px;
+  width: 64px;
+}
 #userLayout .header {
-  margin-bottom: 15px;
-  box-shadow: #eee 1px 1px 5px;
+  margin-top: 16px;
 }
 
 #userLayout .content {
-  background: linear-gradient(to right, #00a6ff, #ff7fa1);
   margin-bottom: 15px;
   padding: 20px;
 }
 
 #userLayout .footer {
-  background: aquamarine;
   padding: 16px;
   position: sticky;
   bottom: 0;
