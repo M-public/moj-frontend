@@ -2,26 +2,26 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { BaseResponse_int_ } from '../models/BaseResponse_int_';
-import type { PostThumbAddRequest } from '../models/PostThumbAddRequest';
+import type { BaseResponse_long_ } from '../models/BaseResponse_long_';
+import type { QuestionSubmitAddRequest } from '../models/QuestionSubmitAddRequest';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
-export class PostThumbControllerService {
+export class QuestionSubmitControllerService {
     /**
-     * doThumb
-     * @param postThumbAddRequest postThumbAddRequest
-     * @returns BaseResponse_int_ OK
+     * doQuestionSubmit
+     * @param questionSubmitAddRequest questionSubmitAddRequest
+     * @returns BaseResponse_long_ OK
      * @returns any Created
      * @throws ApiError
      */
-    public static doThumbUsingPost(
-        postThumbAddRequest: PostThumbAddRequest,
-    ): CancelablePromise<BaseResponse_int_ | any> {
+    public static doQuestionSubmitUsingPost(
+        questionSubmitAddRequest: QuestionSubmitAddRequest,
+    ): CancelablePromise<BaseResponse_long_ | any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/post_thumb/',
-            body: postThumbAddRequest,
+            url: '/api/question_submit/',
+            body: questionSubmitAddRequest,
             errors: {
                 401: `Unauthorized`,
                 403: `Forbidden`,

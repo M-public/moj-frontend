@@ -2,17 +2,14 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type PostQueryRequest = {
+import type { JudgeCase } from './JudgeCase';
+import type { JudgeConfig } from './JudgeConfig';
+export type QuestionUpdateRequest = {
+    answer?: string;
     content?: string;
-    current?: number;
-    favourUserId?: number;
     id?: number;
-    notId?: number;
-    orTags?: Array<string>;
-    pageSize?: number;
-    searchText?: string;
-    sortField?: string;
-    sortOrder?: string;
+    judgeCase?: Array<JudgeCase>;
+    judgeConfig?: Array<JudgeConfig>;
     tags?: Array<string>;
     title?: string;
     userId?: number;
